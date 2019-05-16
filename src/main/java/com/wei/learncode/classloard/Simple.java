@@ -12,7 +12,7 @@ public class Simple {
     static{
         System.out.println("我被初始化了");
     }
-    public final static  int a = 10;
+    public static final int a = 10;
     public static final int b = new Random().nextInt(10);
     public static void test(){
 

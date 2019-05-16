@@ -50,50 +50,5 @@ public class Data {
         System.out.println(Optional.ofNullable("1").orElseGet(() -> {
             return "hahah";
         }));
-
-
-
-//        Objects.requireNonNull(null,"is null");
-
-
-        //利用 Optional 进行多级判断
-       /* EarthModel earthModel1 = new EarthModel();
-        //old
-        if (earthModel1!=null){
-            if (earthModel1.getTea()!=null){
-                //...
-            }
-        }
-        //new
-        Optional.ofNullable(earthModel1)
-                .map(EarthModel::getTea)
-                .map(TeaModel::getType)
-                .isPresent();
-
-
-//        Optional<EarthModel> earthModel = Optional.ofNullable(new EarthModel());
-//        Optional<List<PersonModel>> personModels = earthModel.map(EarthModel::getPersonModels);
-//        Optional<Stream<String>> stringStream = personModels.map(per -> per.stream().map(PersonModel::getName));
-
-
-        //判断对象中的list
-        Optional.ofNullable(new EarthModel())
-                .map(EarthModel::getPersonModels)
-                .map(pers->pers
-                        .stream()
-                        .map(PersonModel::getName)
-                        .collect(toList()))
-                .ifPresent(per-> System.out.println(per));
-
-
-        List<PersonModel> models=Data.getData();
-        Optional.ofNullable(models)
-                .map(per -> per
-                        .stream()
-                        .map(PersonModel::getName)
-                        .collect(toList()))
-                .ifPresent(per-> System.out.println(per));
-
-    }*/
     }
 }
