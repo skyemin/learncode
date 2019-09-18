@@ -3,7 +3,7 @@ package com.wei.learncode.leetcode;
 /**
  * @Author: weizz
  * @Date: 2019/9/10 15:43
- * @Description:
+ * @Description:二叉树的最大深度
  * @Version:1.0
  */
 public class MaxDepth {

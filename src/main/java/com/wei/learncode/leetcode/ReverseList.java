@@ -3,7 +3,7 @@ package com.wei.learncode.leetcode;
 /**
  * @Author: weizz
  * @Date: 2019/9/10 16:25
- * @Description:
+ * @Description:反转链表
  * @Version:1.0
  */
 public class ReverseList {
