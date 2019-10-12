@@ -27,13 +27,13 @@ public class LogAspect {
 		System.out.println(acction.name());
 	}
 	//扫描满足条件的切入点表达式
-	@Before("execution (* com.wei.aop.DemoMethodService.*(..))")
+	@Before("execution (* com.wei.learncode.spring.aop.DemoMethodService.*(..))")
 	public void before(JoinPoint joinPoint){
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		Method method = signature.getMethod();
 		System.out.println(method.getName());
 	}
-   @Around("execution (* com.wei.aop.DemoMethodService.around(..))")
+   @Around("execution (* com.wei.learncode.spring.aop.DemoMethodService.around(..))")
     public void around(ProceedingJoinPoint pjp) throws Throwable{
 	    System.out.println("已经记录下操作日志@Around 方法执行前");
         pjp.proceed();
