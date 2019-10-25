@@ -27,7 +27,7 @@ public class Data {
         PersonModel personModel = new PersonModel();
 
         //对象为空则打出 -
-        Optional<Object> o = Optional.of(personModel);
+        Optional<PersonModel> o = Optional.of(personModel);
         System.out.println(o.isPresent() ? o.get() : "-");
 
         //名称为空则打出 -
