@@ -30,4 +30,7 @@ public class BasicType {
         String str3 = str1+"456";
         System.out.println(str2 == str3);
     }
+
+    public void test(){
+    }
 }
