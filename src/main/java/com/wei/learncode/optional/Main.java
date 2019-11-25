@@ -3,6 +3,7 @@ package com.wei.learncode.optional;
 import jdk.nashorn.internal.runtime.options.Option;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 
 /**
  * @Author: skye
@@ -16,6 +17,12 @@ public class Main {
         Company company = new Company();
         company.setName("张三");
         Optional<Company> optionalCompany = Optional.ofNullable(company);
-        optionalCompany.ifPresent(lang -> System.out.println(lang.getName()));
+        optionalCompany.ifPresent(new Consumer<Company>() {
+            @Override
+            public void accept(Company company) {
+                System.out.println(333);
+            }
+        });
+        optionalCompany.ifPresent(lang -> System.out.println(444));
     }
 }
