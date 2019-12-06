@@ -10,14 +10,9 @@ import lombok.extern.slf4j.Slf4j;
  * @Description:
  * @Version:1.0
  */
-@Data
-@Setter
 public class Student extends Person{
-    @Override
-    public void test() {
-        System.out.println("nihao");
-    }
-    public void test2() {
-        System.out.println("nihao222");
+
+    public Student(String name) {
+        super(name);
     }
 }

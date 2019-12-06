@@ -9,7 +9,9 @@ import com.wei.learncode.thread.basic.Test;
  * @Version:1.0
  */
 public abstract class Person {
-    public abstract void test();
+    public Person(String name){
+        System.out.println(name);
+    }
 
     public void test2(){
         System.out.println("123");

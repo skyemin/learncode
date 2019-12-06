@@ -17,9 +17,9 @@ package com.wei.learncode.classloard;
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException {
         //new对象
-        Simple s = new Simple();
+        //Simple s = new Simple();
         //调用静态变量(final修饰不会初始化)
-        //System.out.println(Simple.a);
+        System.out.println(Simple.a);
         //调用静态方法
         //test();
         //反射
