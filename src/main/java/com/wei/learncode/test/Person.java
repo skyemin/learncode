@@ -13,7 +13,7 @@ public abstract class Person {
         System.out.println(name);
     }
 
-    public void test2(){
+    public final void test2(){
         System.out.println("123");
     }
 }

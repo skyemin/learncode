@@ -25,7 +25,7 @@ public class Main {
     //^异或操作,相同为0.不同为1
     public static void testChange(){
         int x = 300;
-        int y = 189;
+        int y = 300;
         x = x ^ y;
         y = x ^ y;
         x = x ^ y;
@@ -42,6 +42,6 @@ public class Main {
         System.out.println(num);
     }
     public static void main(String[] args) {
-        System.out.println(5<<2);
+        testChange();
     }
 }

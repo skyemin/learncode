@@ -15,4 +15,9 @@ public class Student extends Person{
     public Student(String name) {
         super(name);
     }
+    public static void main(String[] args) {
+        Student s = new Student("");
+        Person p = new Student("");
+        s.test2();
+    }
 }
