@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: skye
  * @Date: 2019/12/16 17:53
- * @Description: 鸡尾酒排序(适用于大多数元素有序的情况)
+ * @Description: 鸡尾酒排序(适用于大多数元素有序的情况) 冒泡排序的变种  先从右往左,再从左往右
  * @Version:1.0
  */
 public class CockTailSort {

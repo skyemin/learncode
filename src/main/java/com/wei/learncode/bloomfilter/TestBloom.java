@@ -19,9 +19,13 @@ public class TestBloom {
         for (int i = 0; i < 1000000; i++) {
             filter.put(i);
         }
-        System.out.println(filter.mightContain(1));
+        if(filter.approximateElementCount()>1000000){
+            filter = BloomFilter.create(Funnels.integerFunnel(),1000000,0.01);
+        };
+        System.out.println(filter.approximateElementCount());
+       /* System.out.println(filter.mightContain(1));
         System.out.println(filter.mightContain(2));
-        System.out.println(filter.mightContain(222222222));
+        System.out.println(filter.mightContain(222222222));*/
         long end = System.currentTimeMillis();
         System.out.println("花费时间:"+(end-start)+"毫秒");
     }

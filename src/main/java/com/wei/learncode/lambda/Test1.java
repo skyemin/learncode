@@ -12,14 +12,7 @@ import java.util.function.Consumer;
 public class Test1 {
 
     public static void main(String[] args) {
-
-        Runnable runnable = new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("线程启动...");
-                }
-        };
-        runnable.run();
+        new Thread(() -> System.out.println(111)).start();
     }
 
     //无参数，无返回值
@@ -51,4 +44,5 @@ public class Test1 {
         //Comparator com = (x, y) -> Integer.compare(100, 244);
         System.out.println("若 Lambda 体中只有一条语句， return 和 大括号都可以省略不写,"+Integer.compare(100, 244));
     }
+
 }
