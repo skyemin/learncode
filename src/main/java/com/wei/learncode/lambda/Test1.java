@@ -1,6 +1,7 @@
 package com.wei.learncode.lambda;
 
 import java.util.Comparator;
+import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
 /**
@@ -11,8 +12,28 @@ import java.util.function.Consumer;
  */
 public class Test1 {
 
-    public static void main(String[] args) {
-        new Thread(() -> System.out.println(111)).start();
+    public  int i = 0;
+
+    public void stop(){
+        this.i = 2;
+    }
+    public static void main(String[] args) throws InterruptedException {
+
+        Test1 t = new Test1();
+        new Thread(() -> {
+            int i = 1;
+            while (true){
+                System.out.println(t.i);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        Thread.sleep(200);
+        new Thread(() -> t.i = 2).start();
+
     }
 
     //无参数，无返回值
