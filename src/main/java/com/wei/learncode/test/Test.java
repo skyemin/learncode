@@ -3,6 +3,7 @@ package com.wei.learncode.test;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -19,10 +20,9 @@ public class Test {
 
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
-        int i = 0;
-        while (true) {
-            list.add(i++);
-        }
+        String a = "123";
+        String b = new String("123");
+        String c = b.intern();
+        System.out.println(a == b);
     }
 }

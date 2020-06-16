@@ -11,8 +11,4 @@ public class ListNode {
      ListNode next;
      ListNode(int x) { val = x; }
 
-     public void add(int val){
-          ListNode listNode = new ListNode(val);
-
-     }
 }

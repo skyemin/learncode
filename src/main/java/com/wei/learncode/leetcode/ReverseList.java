@@ -7,15 +7,23 @@ package com.wei.learncode.leetcode;
  * @Version:1.0
  */
 public class ReverseList {
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
             ListNode nextTemp = curr.next;
             curr.next = prev;
             prev = curr;
+
             curr = nextTemp;
         }
         return prev;
+    }
+
+    public static void main(String[] args) {
+        ListNode node = new ListNode(1);
+        node.next = new ListNode(3);
+        node.next.next = new ListNode(5);
+        reverseList(node);
     }
 }

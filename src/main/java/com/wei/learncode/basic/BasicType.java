@@ -20,6 +20,7 @@ public class BasicType {
         Integer c = Integer.valueOf(129);
         Integer d = Integer.valueOf(129);
         System.out.println(c == d);
+
         //自动装箱会调用valueOf()
         Integer e = 121;
         Integer f = 121;
