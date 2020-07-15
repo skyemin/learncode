@@ -3,7 +3,6 @@ package com.wei.learncode.completableFuture;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
 /**
  * @Author: skye
@@ -37,6 +36,7 @@ public class Test {
                     System.out.println("list1在处理..."+list3.size());
                     return  list1.size();
                 });
-        System.out.println(CompletableFuture.allOf(t1, t2, t3).get());
+        CompletableFuture.allOf(t1, t2, t3).get();
+
     }
 }

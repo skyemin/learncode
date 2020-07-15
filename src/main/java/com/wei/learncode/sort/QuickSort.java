@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: skye
  * @Date: 2019/12/17 15:27
- * @Description: 快速排序 O(logN)  挖坑法/指针交换法
+ * @Description: 快速排序 O(N*logN)  挖坑法/指针交换法
  * @Version:1.0
  */
 public class QuickSort {
