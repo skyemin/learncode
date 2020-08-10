@@ -1,7 +1,5 @@
 package com.wei.learncode.basic;
 
-import com.wei.learncode.package1.Student;
-
 /**
  * @Author: skye
  * @Date: 2019/11/22 16:50
