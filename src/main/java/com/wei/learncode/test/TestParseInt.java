@@ -9,7 +9,7 @@ package com.wei.learncode.test;
 public class TestParseInt {
 
     public static void main(String[] args) {
-        System.out.println(parse("456",10));
+        System.out.println(parse("-456",10));
     }
 
    public static Integer parse(String s,int radix){
@@ -24,7 +24,6 @@ public class TestParseInt {
                //判断正负
                if (firstChar == '-') {
                    negative = true;
-                   i++;
                } else if (firstChar != '+'){
                     return null;
                }

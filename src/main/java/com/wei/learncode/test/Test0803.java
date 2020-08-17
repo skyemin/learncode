@@ -11,6 +11,7 @@ public class Test0803 {
     public static void main(String[] args) {
 
         char[] a = {'a','c','d','f','g'};
+
         char[] b = {'a','c','d','g'};
 
         if(b.length == 0){

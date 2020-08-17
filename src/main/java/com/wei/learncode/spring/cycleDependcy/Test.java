@@ -1,4 +1,4 @@
-package com.wei.learncode.spring;
+package com.wei.learncode.spring.cycleDependcy;
 
 import lombok.SneakyThrows;
 
