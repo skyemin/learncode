@@ -22,6 +22,7 @@ public class QuickSort {
         if(begin >= end){
             return;
         }
+        //得到一个索引,左边数据都小于他,右边数据都大于他
         int pivot = partition(array,begin,end);
         quickSort(array,begin,pivot-1);
         quickSort(array,pivot+1,end);

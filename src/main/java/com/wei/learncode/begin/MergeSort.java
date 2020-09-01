@@ -20,6 +20,7 @@ public class MergeSort {
         if(left>=right){
             return;
         }
+        //>>1 == /2
         int mid = (left+right) >> 1;
         mergeSort(nums,left,mid);
         mergeSort(nums,mid+1,right);
