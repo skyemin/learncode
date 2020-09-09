@@ -16,6 +16,26 @@ public class MaxSubArray {
     }
     public int maxSubArray(int[] nums) {
 
+        //定义数组状态   a[i] 表示到第i的最大值
+        //重复性
+        //dp方程
+
+        int n = nums.length;
+        if(n == 0){
+            return 0;
+        }
+        int[] a = new int[n];
+        int max = nums[0];
+        a[0]= nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if(a[i-1]>0){
+                a[i] = a[i-1]+nums[i];
+            }else{
+                a[i] = nums[i];
+            }
+            max = Math.max(a[i],max);
+        }
+        return max;
         /*if(nums == null) return 0;
         int[] dp = new int[nums.length];
         for (int i = 1; i < nums.length; i++) {
@@ -31,7 +51,7 @@ public class MaxSubArray {
         }
         return tmp;*/
 
-        int max = nums[0];
+       /* int max = nums[0];
         //存储中间值
         int tmpMax = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -42,6 +62,6 @@ public class MaxSubArray {
             }
             max = Math.max(tmpMax,max);
         }
-        return max;
+        return max;*/
     }
 }

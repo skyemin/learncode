@@ -16,18 +16,20 @@ public class LongestCommonSubsequence {
     }
     public int longestCommonSubsequence(String text1, String text2) {
 
-        int num = 0;
-        int tmp = 0;
-        for (int i = 0; i < text2.length(); i++) {
-            for (int j = 0; j < text1.length(); j++) {
-                if(text2.charAt(i) == text1.charAt(j) && j>=tmp){
-                    num++;
-                    //在第几位
-                    tmp = j;
-                    break;
+        int m = text1.length();
+        int n = text2.length();
+        int[][] dp = new int[m+1][n+1];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                char c1 = text1.charAt(i);
+                char c2 = text2.charAt(j);
+                if(c1 == c2){
+                    dp[i+1][j+1] = dp[i][j]+1;
+                }else{
+                    dp[i+1][j+1] = Math.max(dp[i][j+1],(dp[i+1][j]));
                 }
             }
         }
-        return num;
+        return dp[m][n];
     }
 }

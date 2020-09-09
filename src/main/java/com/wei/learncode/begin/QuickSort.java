@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] array = {1,2,3,4,7,5,18,9,100,80,25};
+        int[] array = {1,7,8,9,2,1,3,5,4};
         quickSort(array,0,array.length-1);
         System.out.println(Arrays.toString(array));
     }
@@ -32,7 +32,7 @@ public class QuickSort {
     private static int partition(int[] array, int begin, int end) {
 
         int pivot = end;
-        int counter = begin;
+        int counter = begin;//小于pivot元素的个数
         for (int i = begin; i < end; i++) {
             if(array[i] < array[pivot]){
                 int tmp = array[i]; array[i] = array[counter]; array[counter] = tmp;
