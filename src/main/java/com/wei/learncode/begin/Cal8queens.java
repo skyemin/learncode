@@ -3,7 +3,7 @@ package com.wei.learncode.begin;
 /**
  * @Author: skye
  * @Date: 2020/8/29 11:57
- * @Description:
+ * @Description: 八皇后问题
  * @Version:1.0
  */
 public class Cal8queens {
@@ -20,7 +20,6 @@ public class Cal8queens {
 
         if(row == 8){
             printQueens(result);
-
         }
         for (int column = 0; column < 8; column++) {
             if(isOk(row,column)){

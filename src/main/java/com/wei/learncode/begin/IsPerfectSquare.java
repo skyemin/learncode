@@ -3,14 +3,14 @@ package com.wei.learncode.begin;
 /**
  * @Author: skye
  * @Date: 2020/8/14 9:27
- * @Description:
+ * @Description: 一个树的平方根是否是整数
  * @Version:1.0
  */
 public class IsPerfectSquare {
 
     public static void main(String[] args) {
         //System.out.println(Math.sqrt(808201));
-        System.out.println(isPerfectSquare(808201));
+        System.out.println(isPerfectSquare(8));
     }
 
     public static boolean isPerfectSquare(int num) {

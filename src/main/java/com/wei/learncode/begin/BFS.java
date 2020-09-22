@@ -18,10 +18,11 @@ public class BFS {
         if (root == null) {
             return allResults;
         }
+        //通过队列先进先出
         Queue<TreeNode> nodes = new LinkedList<>();
         nodes.add(root);
+        //一层一层往队列里塞
         while (!nodes.isEmpty()) {
-
             int size = nodes.size();
             List<Integer> results = new ArrayList<>();
             for (int i = 0; i < size; i++) {
@@ -35,19 +36,6 @@ public class BFS {
                 }
             }
             allResults.add(results);
-            /*int size = nodes.size();
-            List<Integer> results = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                TreeNode node = nodes.poll();
-                results.add(node.val);
-                if (node.left != null) {
-                    nodes.add(node.left);
-                }
-                if (node.right != null) {
-                    nodes.add(node.right);
-                }
-            }
-            allResults.add(results);*/
         }
         return allResults;
     }

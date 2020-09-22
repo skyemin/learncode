@@ -18,7 +18,7 @@ public class InvertTree {
         TreeNode(int x) { val = x; }
     }
     //递归方式
-    /*public TreeNode invertTree(TreeNode root) {
+    public TreeNode invertTree1(TreeNode root) {
 
         if(root == null){
             return null;
@@ -28,13 +28,14 @@ public class InvertTree {
         root.left = right;
         root.right = left;
         return root;
-    }*/
+    }
     //迭代方式
     public TreeNode invertTree(TreeNode root) {
         if(root == null){
             return null;
         }
         Queue<TreeNode> queue = new LinkedList();
+        queue.add(root);
         while(!queue.isEmpty()){
             TreeNode treeNode = queue.poll();
             TreeNode tmp = treeNode.left;

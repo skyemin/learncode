@@ -8,6 +8,7 @@ package com.wei.learncode.begin;
  */
 public class LongestPalindrome {
 
+    //判断字符串是否回文
     public boolean isPalindromic(String s) {
         int len = s.length();
         for (int i = 0; i < len / 2; i++) {

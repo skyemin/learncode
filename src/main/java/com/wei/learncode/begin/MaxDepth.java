@@ -3,7 +3,7 @@ package com.wei.learncode.begin;
 /**
  * @Author: skye
  * @Date: 2020/8/25 10:52
- * @Description:
+ * @Description: 树的最大深度
  * @Version:1.0
  */
 public class MaxDepth {
