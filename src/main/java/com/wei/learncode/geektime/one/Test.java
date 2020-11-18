@@ -9,7 +9,7 @@ package com.wei.learncode.geektime.one;
 public class Test {
 
     private static long count = 0;
-    private void add10K() {
+    public synchronized void add10K() {
         int idx = 0;
         while(idx++ < 10000) {
             count = count + 1
