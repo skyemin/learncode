@@ -4,7 +4,7 @@ package com.wei.learncode.hashmap;
  * @Author: skye
  * @Date: 2020/7/28 17:43
  * @Description:
- * @Version:1.0
+ * @Version:1.0lru
  */
 public class HashTest {
 

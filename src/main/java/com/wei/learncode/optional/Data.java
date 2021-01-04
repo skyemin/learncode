@@ -8,10 +8,8 @@ import java.util.Optional;
 
 */
 
-import com.wei.learncode.optional.EarthModel;
 import com.wei.learncode.stream.PersonModel;
 
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -23,6 +21,12 @@ import java.util.Optional;
 
 public class Data {
     public static void main(String[] args) {
+
+        String s = null;
+        Optional<String> test = Optional.ofNullable(s);
+        System.out.println(test.orElseGet(()->{
+            return "test";
+        }));
 
         PersonModel personModel = new PersonModel();
 

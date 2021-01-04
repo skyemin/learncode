@@ -1,7 +1,5 @@
 package com.wei.learncode;
 
-import java.util.Scanner;
-
 /**
  * @Author: skye
  * @Date: 2020/9/6 11:12
@@ -11,8 +9,9 @@ import java.util.Scanner;
 public class testHuawei {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        System.out.println(s);
+       int i = 199999;
+        System.out.println((i+"").substring(0,4));
+        System.out.println((i+"").substring(4,6));
+
     }
 }
