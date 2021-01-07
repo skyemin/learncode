@@ -1,4 +1,4 @@
-package com.wei.learncode.redis;
+package com.wei.learncode.rocketmq;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
