@@ -1,10 +1,12 @@
-package com.wei.learncode.geekAlgorithm.day3;
+package com.wei.learncode.geekAlgorithm.day3.time2;
+
+import com.wei.learncode.geekAlgorithm.day3.time1.ListNode;
 
 /**
  * @author skye
  * @version 1.0
- * @description:  https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/hua-jie-suan-fa-24-liang-liang-jiao-huan-lian-biao/
- * @date 2021/1/25 15:09
+ * @description:
+ * @date 2021/1/27 10:13
  */
 public class SwapPairs {
 

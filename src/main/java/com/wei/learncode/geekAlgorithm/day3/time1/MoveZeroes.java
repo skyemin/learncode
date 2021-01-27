@@ -1,4 +1,4 @@
-package com.wei.learncode.geekAlgorithm.day3;
+package com.wei.learncode.geekAlgorithm.day3.time1;
 
 import java.util.Arrays;
 

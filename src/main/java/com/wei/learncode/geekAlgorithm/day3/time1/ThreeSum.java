@@ -1,11 +1,11 @@
-package com.wei.learncode.geekAlgorithm.day3;
+package com.wei.learncode.geekAlgorithm.day3.time1;
 
 import java.util.*;
 
 /**
  * @author skye
  * @version 1.0
- * @description:
+ * @description: https://leetcode-cn.com/problems/3sum/
  * @date 2021/1/25 13:55
  */
 public class ThreeSum {
