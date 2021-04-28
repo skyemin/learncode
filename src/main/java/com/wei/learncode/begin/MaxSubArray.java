@@ -12,7 +12,7 @@ public class MaxSubArray {
 
     public static void main(String[] args) {
         MaxSubArray maxSubArray = new MaxSubArray();
-        System.out.println(maxSubArray.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println(maxSubArray.maxSubArray(new int[]{1, -2, 3, 5, -2, 6, -1}));
     }
     public int maxSubArray(int[] nums) {
 
