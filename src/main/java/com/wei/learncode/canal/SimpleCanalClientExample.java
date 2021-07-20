@@ -1,4 +1,4 @@
-package com.wei.learncode.canal1;
+package com.wei.learncode.canal;
 
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;
