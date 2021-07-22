@@ -32,7 +32,7 @@ public class Main {
         System.out.println(x);
         System.out.println(y);
     }
-    //任何数与其本身异或结果为0,任何数与0异或结果为1
+    //任何数与其本身异或结果为0,任何数与0异或结果为其本身
     public static void find(){
         int[] array = {1,2,3,4,5,4,3,2,1};
         int num = array[0];
