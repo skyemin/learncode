@@ -1,7 +1,5 @@
 package com.wei.learncode.optional;
 
-import jdk.nashorn.internal.runtime.options.Option;
-
 import java.util.Optional;
 import java.util.function.Consumer;
 
@@ -23,6 +21,6 @@ public class Main {
                 System.out.println(333);
             }
         });
-        optionalCompany.ifPresent(lang -> System.out.println(444));
+        optionalCompany.ifPresent(lang -> System.out.println());
     }
 }
