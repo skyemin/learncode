@@ -38,4 +38,9 @@ public class MaxLength {
         }
         return max;
     }
+
+    public static void main(String[] args) {
+        String s = "张三";
+        System.out.println((int) s.charAt(1));
+    }
 }
