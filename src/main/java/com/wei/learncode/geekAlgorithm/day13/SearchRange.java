@@ -3,7 +3,7 @@ package com.wei.learncode.geekAlgorithm.day13;
 /**
  * @author skye
  * @version 1.0
- * @description: 二分查找左边界
+ * @description: 二分查找左右边界
  * @date 2021/8/13 16:28
  */
 public class SearchRange {
