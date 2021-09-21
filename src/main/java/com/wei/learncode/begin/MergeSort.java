@@ -34,6 +34,7 @@ public class MergeSort {
         while(i<=mid && j<=right){
             tmp[k++] = nums[i] <= nums[j]?nums[i++]:nums[j++];
         }
+
         while(i<=mid){
             tmp[k++] = nums[i++];
         }
