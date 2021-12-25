@@ -20,7 +20,7 @@ public class LearncodeApplication {
 		User user1 = context.getBean(User.class);
 		System.out.println(user == user1);
 		//String[] names = context.getBeanNamesForType(User.class);
-		/*// 查看基于注解的 IOC容器中所有组件名称
+		/*// 查看基于注解的 IOC容器中所有组件名
 		String[] beanNames = context.getBeanDefinitionNames();
 		Arrays.asList(beanNames).forEach(System.out::println);*/
 	}
