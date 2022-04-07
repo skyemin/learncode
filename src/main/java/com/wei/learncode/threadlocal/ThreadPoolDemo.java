@@ -1,5 +1,8 @@
 package com.wei.learncode.threadlocal;
 
+import com.alibaba.ttl.TransmittableThreadLocal;
+import com.alibaba.ttl.threadpool.TtlExecutors;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -11,27 +14,25 @@ import java.util.concurrent.Executors;
  */
 public class ThreadPoolDemo {
 
-    public static final InheritableThreadLocal t = new InheritableThreadLocal();
+    //public static final InheritableThreadLocal t = new InheritableThreadLocal();
+    public static final TransmittableThreadLocal<String> t = new TransmittableThreadLocal<>();
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws InterruptedException {
         t.set("test");
         ExecutorService executorService = Executors.newFixedThreadPool(1);
+        //需要做修饰
+        executorService = TtlExecutors.getTtlExecutorService(executorService);
         Runnable runnable1 = () -> {
-            System.out.println("new修改前:" + t.get());
+            System.out.println("线程1:" + t.get());
         };
-        Runnable runnable2 = ()->{
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("new修改后:"+t.get());
+        Runnable runnable2 = () -> {
+            System.out.println("线程2:" + t.get());
         };
         executorService.submit(runnable1);
-        System.out.println("main修改前:"+t.get());
-        t.set("test1");
-        System.out.println("main修改后:"+t.get());
+        Thread.sleep(1000);
+        t.set("test2");
         executorService.submit(runnable2);
-        System.out.println("main最后:"+t.get());
+        executorService.shutdown();
     }
 }
