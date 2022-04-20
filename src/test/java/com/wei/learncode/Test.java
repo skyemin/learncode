@@ -1,5 +1,7 @@
 package com.wei.learncode;
 
+import java.math.BigDecimal;
+
 /**
  * @Author: skye
  * @Date: 2020/8/11 20:15
@@ -16,7 +18,9 @@ public class Test {
 
     public static void main(String[] args) {
 
-        char[] a = {'a','c','f','d','g'};
+            BigDecimal bal = new BigDecimal("0.0");
+            System.out.println(bal.compareTo(null));
+        /*char[] a = {'a','c','f','d','g'};
         char[] b = {'a','c','d','g'};
 
 
@@ -31,7 +35,7 @@ public class Test {
             }
             System.out.println(1);
         }
-
+*/
 
 
         /*if(b.length == 0){
