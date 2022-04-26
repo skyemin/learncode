@@ -118,12 +118,12 @@
 			<artifactId>rocksdbjni</artifactId>
 			<version>5.17.2</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>com.alibaba.testable</groupId>
 			<artifactId>testable-all</artifactId>
 			<version>${testable.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>com.github.rholder</groupId>
 			<artifactId>guava-retrying</artifactId>
@@ -147,6 +147,19 @@
 			<artifactId>caffeine</artifactId>
 			<version>3.0.3</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>3.0.7</version>
+		</dependency>
+
 
 	</dependencies>
 
@@ -156,13 +169,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<argLine>-javaagent:${settings.localRepository}/com/alibaba/testable/testable-agent/${testable.version}/testable-agent-${testable.version}.jar</argLine>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 
