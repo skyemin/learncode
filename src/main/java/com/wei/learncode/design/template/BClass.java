@@ -8,7 +8,23 @@ package com.wei.learncode.design.template;
  */
 public class BClass {
 
-    public void process(ICallback callback){
-        callback.methodToCallback();
+    public static void main(String[] args) {
+
+        BClass b = new BClass();
+        ICallback callback = new ICallback() {
+            @Override
+            public void methodToCallback(BClass bClass, int value) {
+              b.test(value);
+            }
+        };
+        CClass C = new CClass();
+        C.c(callback,b);
+        System.out.println("主线程完成");
     }
+
+    private void test(int value ) {
+        System.out.println("开始执行回调回来的"+value);
+    }
+
+
 }

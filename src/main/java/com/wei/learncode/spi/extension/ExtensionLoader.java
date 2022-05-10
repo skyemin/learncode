@@ -20,7 +20,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * <p>
  * refer to dubbo spi: <a href="https://dubbo.apache.org/zh/docs/concepts/extensibility/#dubbo-%E6%89%A9%E5%B1%95%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B">https://dubbo.apache.org/zh/docs/concepts/extensibility/#dubbo-%E6%89%A9%E5%B1%95%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B</a>
  *
- * @Author: ppphuang
+ * @Author: skye
  * @Create: 2022/4/20
  * @see <a href="https://github.com/apache/dubbo/blob/2.5.x/dubbo-common/src/main/java/com/alibaba/dubbo/common/extension/ExtensionLoader.java">...</a>
  */
