@@ -9,8 +9,8 @@ package com.wei.learncode;
 public class Main {
 
     public static void main(String[] args) {
-
-
+        String test = "110000";
+        System.out.println(test.substring(0,2));
     }
 
     void dfs(int[][]grid,int r,int c){

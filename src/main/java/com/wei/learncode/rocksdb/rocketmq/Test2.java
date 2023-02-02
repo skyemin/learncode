@@ -1,4 +1,4 @@
-package com.wei.learncode.rocketmq;
+package com.wei.learncode.rocksdb.rocketmq;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;

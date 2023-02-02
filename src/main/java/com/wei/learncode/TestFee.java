@@ -1,5 +1,7 @@
 package com.wei.learncode;
 
+import java.util.StringJoiner;
+
 /**
  * @author skye
  * @version 1.0
@@ -26,7 +28,12 @@ public class TestFee {
     }
     public static void main(String[] args) {
 
-        TestFee testFee = new TestFee();
-        System.out.println(testFee.calculate(30));
+       /* TestFee testFee = new TestFee();
+        System.out.println(testFee.calculate(30));*/
+        StringJoiner stringJoiner = new StringJoiner(" | ");
+        stringJoiner.add("朝阳区");
+        stringJoiner.add("酒仙桥自如寓");
+        stringJoiner.add("距14号线将台地铁站2146米");
+        System.out.println(stringJoiner.toString());
     }
 }
