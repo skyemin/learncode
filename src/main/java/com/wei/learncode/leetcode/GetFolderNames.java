@@ -1,5 +1,8 @@
 package com.wei.learncode.leetcode;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,11 +38,19 @@ public class GetFolderNames {
     }
 
     public static void main(String[] args) {
-        String[] names = {"kaido","kaido","kaido","kaido(1)"};
+        /*String[] names = {"kaido","kaido","kaido","kaido(1)"};
         GetFolderNames getFolderNames = new GetFolderNames();
         String[] folderNames = getFolderNames.getFolderNames(names);
         for (String folderName : folderNames) {
             System.out.println(folderName);
-        }
+        }*/
+       /* Integer i= null;
+        System.out.println(1 == i);*/
+        Date date = new Date();
+
+        LocalDateTime startTime = LocalDateTime.ofInstant(date.toInstant(),
+                ZoneId.systemDefault());
+        System.out.println(1);
+
     }
 }
