@@ -170,6 +170,12 @@
 			<artifactId>forms_rt</artifactId>
 			<version>7.0.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
     </dependencies>
 
 	<build>

@@ -88,5 +88,17 @@ public class MyClassLoaderTest {
         Method method = clazz.getDeclaredMethod("sout", null);
         method.invoke(obj, null);
         System.out.println(clazz.getClassLoader().getClass().getName());
+
+        String luaScript = "local resultArray = redis.call('zrangebyscore', KEYS[1], 0, ARGV[1])\n" +
+                "if #resultArray > 0 then\n" +
+                "    if redis.call('zrem', KEYS[1], resultArray[1]) > 0 then\n" +
+                "        return resultArray[1]\n" +
+                "    else\n" +
+                "        return ''\n" +
+                "    end\n" +
+                "else\n" +
+                "    return ''\n" +
+                "end";
+
     }
 }
