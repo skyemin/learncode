@@ -6,8 +6,7 @@ import com.google.common.collect.TreeRangeMap;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Date;
-import java.util.StringJoiner;
+import java.util.*;
 
 /**
  * @author skye
@@ -35,7 +34,7 @@ public class TestFee {
     }
     public static void main(String[] args) {
 
-        Double a = 1.0;
+      /*  Double a = 1.0;
         Double b = 1.0;
         System.out.println(a==b);
         BigDecimal rentPrice = BigDecimal.valueOf(1299);
@@ -47,7 +46,7 @@ public class TestFee {
         waveMap.put(Range.closed(0, 1), 2);
         System.out.println(waveMap.get(0));
         System.out.println(waveMap.get(1));
-        System.out.println(waveMap.get(3));
+        System.out.println(waveMap.get(3));*/
        /* TestFee testFee = new TestFee();
         System.out.println(testFee.calculate(30));*/
        /* StringJoiner stringJoiner = new StringJoiner(" | ");
@@ -55,5 +54,20 @@ public class TestFee {
         stringJoiner.add("酒仙桥自如寓");
         stringJoiner.add("距14号线将台地铁站2146米");
         System.out.println(stringJoiner.toString());*/
+       /* String test = "123";
+        System.out.println(test.contains(""));*/
+       /* List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()){
+            Integer next = iterator.next();
+            if(next == 2){
+                iterator.remove();
+            }
+        }
+        System.out.println(list.size());*/
+        Integer a = null;
+        System.out.println(a == 1);
     }
 }
