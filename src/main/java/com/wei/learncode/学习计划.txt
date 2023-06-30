@@ -1,0 +1,16 @@
+redis--mysql--map--lock--spring--
+
+2.数据结构:全局hash表 渐进式rehash String(SDS) List(双向链表/压缩列表) Set(整数数组/哈希表) Hash(哈希表/压缩列表) ZSET(跳表/压缩列表)
+3.IO模型: redis快的原因:大部分操作在内存进行/高效的数据结构/多路复用机制  select/poll/epoll区别
+4.AOF:always/second/no AOF重写,一次拷贝,两处日志 fork/写时复制
+5.RDB:写时复制,不阻塞主进程 redis4.0混合RDB+AOF
+6.主从:同步基本原理 replication_buff(同步数据)/backlog_buff(记录偏移量)
+7.哨兵:主观下线-N/2+1-客观下线
+8.哨兵选举:类似raft
+9.cluster集群:CRC16(key)%16384  节点存储映射关系
+11.String:SDS/RedisObject/dictEntry开销 string->hash节省内存
+12.统计:set取交/并/差集  sorted-set排序 二值状态 bit-map hyperloglog 基数统计
+13.GEO:二分区间/区间编码 RedisObject(元数据和指针) type:值类型(五种类型) encoding(编码方式) lru(最后一次访问时间) refcount:引用技术 *ptr:引用数据的指针
+14.时序统计: MUTLI/EXEC保证原子性 redisTimeSeries时序库
+15.消息队列:List/Stream(5.0之后)
+16.阻塞:阻塞点:集合全量查询和聚合操作/bigkey删除/清空数据库/aof同步写/加载rdb文件
