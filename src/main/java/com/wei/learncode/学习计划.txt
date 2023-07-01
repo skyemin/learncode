@@ -14,3 +14,8 @@ redis--mysql--map--lock--spring--
 14.时序统计: MUTLI/EXEC保证原子性 redisTimeSeries时序库
 15.消息队列:List/Stream(5.0之后)
 16.阻塞:阻塞点:集合全量查询和聚合操作/bigkey删除/清空数据库/aof同步写/加载rdb文件
+17.绑核:NUMA架构 避免redis数据在多核上下文切换
+18/19.redis变慢:定期删除策略 aof重写磁盘压力大 阻塞fsync 内存swap 内存大页机制
+20.内存碎片 如何清理
+21.客户端输入输出缓冲区/主从同步缓冲区(repl_buff)/断连缓冲区(back_log_buff)/pipeline批量
+22.
