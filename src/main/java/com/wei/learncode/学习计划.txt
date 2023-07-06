@@ -29,4 +29,6 @@ redis--mysql--map--lock--spring--
 31.事务 MULTI EXEC DISCARD WATCH
 32.主从问题:主从数据不一致(监控同步进度) 读到过期数据(expireat)
 33.脑裂(1.主库连接的最少从库数 2.从库ack时间)
-34.codis
+35.codis
+36.秒杀场景应用
+37.数据倾斜:bigkey,slot分布不均,hash tag
