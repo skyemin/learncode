@@ -32,3 +32,5 @@ redis--mysql--map--lock--spring--
 35.codis
 36.秒杀场景应用
 37.数据倾斜:bigkey,slot分布不均,hash tag
+39.redis6.0:io现成多线程
+40.NVM
