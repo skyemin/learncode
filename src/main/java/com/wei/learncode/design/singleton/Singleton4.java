@@ -11,7 +11,7 @@ public class Singleton4 {
     private Singleton4(){
 
     }
-    private static Singleton4 s;
+    private static volatile Singleton4 s;
     public static Singleton4 getInstance(){
         if(s == null){
             synchronized (Singleton4.class){
