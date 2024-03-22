@@ -1,0 +1,3 @@
+#foreach($element in $list)\n" +
+" This is $element.name\n" +
+"#end
