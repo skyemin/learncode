@@ -35,12 +35,11 @@ public class SampleMail {
     public static void main(String[] args) {
         // 配置发送邮件的环境属性
         final Properties props = new Properties();
-
         // 表示SMTP发送邮件，需要进行身份验证
-        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.auth", "false");
         props.put("mail.smtp.host", "");
         //设置端口：
-        props.put("mail.smtp.port", "25");//或"25", 如果使用ssl，则去掉使用80或25端口的配置，进行如下配置：
+        props.put("mail.smtp.port", "80");//或"25", 如果使用ssl，则去掉使用80或25端口的配置，进行如下配置：
         //加密方式：
         //props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         //props.put("mail.smtp.socketFactory.port", "465");
@@ -86,11 +85,11 @@ public class SampleMail {
 
             //可选。设置回信地址
             Address[] a = new Address[1];
-            a[0] = new InternetAddress("@qq.com");
+            a[0] = new InternetAddress("n");
             message.setReplyTo(a);
 
             // 设置收件人邮件地址
-            InternetAddress to = new InternetAddress("@qq.com");
+            InternetAddress to = new InternetAddress("");
             message.setRecipient(MimeMessage.RecipientType.TO, to);
             //如果同时发给多人，才将上面两行替换为如下（因为部分收信系统的一些限制，尽量每次投递给一个人；同时我们限制单次允许发送的人数，具体参考规格清单）：
             //InternetAddress[] adds = new InternetAddress[2];
@@ -116,7 +115,6 @@ public class SampleMail {
             //设置邮件标题
             message.setSubject("测试主题");
             message.setContent("测试<br> 内容", "text/html;charset=UTF-8");//html超文本；// "text/plain;charset=UTF-8" //纯文本。
-
 //            //若需要开启邮件跟踪服务，请使用以下代码设置跟踪链接头。前置条件和约束见文档"如何开启数据跟踪功能？"
 //            String tagName = "Test";
 //            HashMap<String, String> trace = new HashMap<>();
