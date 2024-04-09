@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DiConfig.class);
-		TestBean useFunctionService = context.getBean(TestBean.class);
+		//TestBean useFunctionService = context.getBean(TestBean.class);
 		//System.out.println(useFunctionService.say("成功了"));
 		context.close();
 	}

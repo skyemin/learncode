@@ -1,5 +1,6 @@
 package com.wei.learncode;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,7 @@ import java.util.Map;
 public class TestVelocity {
 
     public static void main(String[] args) {
+        String html = "";
         VelocityEngine engine = new VelocityEngine();
         engine.setProperty(RuntimeConstants.RUNTIME_LOG_LOGSYSTEM_CLASS, "org.apache.velocity.runtime.log.Log4JLogChute");
         engine.setProperty("runtime.log.logsystem.log4j.logger", log.getName());
@@ -36,12 +38,10 @@ public class TestVelocity {
                 "#end");
         Template template = engine.getTemplate("template/test1.vm","UTF-8");
         VelocityContext context = new VelocityContext();
-        Map<String, Object> paramMap = new HashMap<>();
-        Map map1 = new HashMap<>();
-        map1.put("name", "zs");
-        Map map2 = new HashMap<>();
-        map2.put("name", "ls");
-        paramMap.put("list", Arrays.asList(map1,map2));
+
+        String json = "{\"passengers\":[{\"firstName\":\"YiTong\",\"lastName\":\"Li\",\"ticketNum\":\"000-12345678\"},{\"firstName\":\"Qiu\",\"lastName\":\"Ling\",\"ticketNum\":\"111-87654321\"}],\"orderId\":\"123456789098765\",\"flightDetails\":[{\"airline\":\"CA\",\"arrAirport\":\"Don Mueang Inernational Airport\",\"arrAirportTerm\":\"T1\",\"arrCity\":\"Bangkok\",\"arrTime\":\"Wednesday, Apr 3 2024 · 18:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Ninoy Aquino International Airport\",\"depAirportTerm\":\"T2\",\"depCity\":\"Manila\",\"depTime\":\"Wednesday, Apr 3 2024 · 12:00\",\"flightNo\":\"1234\",\"segmentId\":\"1\"},{\"airline\":\"CA\",\"arrAirport\":\"BaiYun International Airport\",\"arrAirportTerm\":\"T2\",\"arrCity\":\"Beijing\",\"arrTime\":\"Wednesday, Apr 4 2024 · 02:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Don Mueang Inernational Airport\",\"depAirportTerm\":\"T1\",\"depCity\":\"Bangkok\",\"depTime\":\"Wednesday, Apr 3 2024 · 19:00\",\"flightNo\":\"3456\",\"segmentId\":\"2\"}]}";
+        //String json = "{\"orderId\":\"123456789098765\",\"flightDetails\":[{\"airline\":\"CA\",\"arrAirport\":\"Don Mueang Inernational Airport\",\"arrAirportTerm\":\"T1\",\"arrCity\":\"Bangkok\",\"arrTime\":\"Wednesday, Apr 3 2024 · 18:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Ninoy Aquino International Airport\",\"depAirportTerm\":\"T2\",\"depCity\":\"Manila\",\"depTime\":\"Wednesday, Apr 3 2024 · 12:00\",\"flightNo\":\"1234\",\"segmentId\":\"1\"},{\"airline\":\"CA\",\"arrAirport\":\"BaiYun International Airport\",\"arrAirportTerm\":\"T2\",\"arrCity\":\"Beijing\",\"arrTime\":\"Wednesday, Apr 4 2024 · 02:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Don Mueang Inernational Airport\",\"depAirportTerm\":\"T1\",\"depCity\":\"Bangkok\",\"depTime\":\"Wednesday, Apr 3 2024 · 19:00\",\"flightNo\":\"3456\",\"segmentId\":\"2\"}]}";
+        Map<String, Object> paramMap = JSONObject.parseObject(json);
         for (Map.Entry<String, Object> entry : paramMap.entrySet()) {
             context.put(entry.getKey(), entry.getValue());
         }
