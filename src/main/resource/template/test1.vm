@@ -1,3 +1,621 @@
-#foreach($element in $list)\n" +
-" This is $element.name\n" +
-"#end
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title></title>
+    <style>
+        @page {
+            size: A4 portrait;
+            /* A4纸及方向或 landscape */
+            margin: 2cm;
+            /* 打印产物边距 */
+            width: 21cm;
+            /* 打印产物宽 */
+            height: 29.7cm;
+            /* 打印产物高 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins;
+            box-sizing: border-box;
+        }
+
+        .Bigbox {
+            margin: 0 auto;
+            background: #FFF;
+            width: 100%;
+        }
+
+        .header {
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .header_logo {
+            width: 50%;
+            height: 80px;
+            float: left;
+            box-sizing: border-box;
+            line-height: 100px;
+
+        }
+
+        .header_logo_detail {
+            height: 40%
+        }
+
+        .header_order {
+            float: right;
+            width: 50%
+        }
+
+        .header_order_details {
+            font-size: 12pt;
+            width: 229px;
+            font-weight: bold;
+            line-height: normal;
+            color: #333333;
+            box-sizing: border-box;
+            line-height: 80px;
+            float: right;
+        }
+
+        .header_explain {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header_explain_details {
+            width: 33%;
+            height: 52px;
+            line-height: 75px;
+            float: left;
+        }
+
+        .header_explain_details_image {
+            width: 15%;
+            height: 15%;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .header_explain_details_words {
+            line-height: 19px;
+            vertical-align: middle;
+            font-size: 10pt;
+        }
+
+        .header_explain_box {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .main_box {
+            border: 1px solid #5C5F66;
+            margin-top: 20px;
+            padding: 30px 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .main_box_over_style {
+            overflow: hidden;
+        }
+
+        .main_box_title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #0F131A;
+            float: left;
+            width: 50%;
+        }
+
+        .main_box_title_PNR {
+            width: 50%;
+            float: right;
+        }
+
+        .main_box_title_PNR_detail {
+            line-height: 20pt;
+            width: 100pt;
+            font-size: 10pt;
+            font-weight: bold;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            background: #1972F9;
+            border-radius: 40px;
+            padding: 4px 10px;
+            gap: 10px;
+            float: right;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .main_ltinerary {
+            margin-top: 10px;
+            border: 1px solid #D2D4D9;
+            overflow: hidden;
+        }
+
+        .main_ltinerary_header {
+            overflow: hidden;
+            background-color: #F7F8FA;
+        }
+
+        .main_ltinerary_header_left_word {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #0F131A;
+            padding: 10px 10px 0px 20px;
+            width: 100%;
+
+        }
+
+        .main_ltinerary_header_left-words {
+            font-size: 11pt;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #919499;
+            padding-left: 20px;
+        }
+
+        .main_ltinerary_header_left {
+            float: left;
+            width: 50%;
+        }
+
+        .main_ltinerary_header_image {
+            width: 200px;
+            height: 56px;
+            float: inline-end;
+            padding: 4px 10px 0px 0px;
+            float: right;
+        }
+
+        .main_ltinerary_details {
+            width: 100%;
+            margin: 5px 0px;
+            font-size: 11pt;
+            font-weight: normal;
+            line-height: 120%;
+            letter-spacing: 0em;
+            color: #0F131A;
+            overflow: hidden;
+        }
+
+        .main_ltinerary_details-Two {
+            width: 100%;
+            margin: 5px 0px;
+            font-size: 11pt;
+            font-weight: normal;
+            line-height: 120%;
+            letter-spacing: 0em;
+            color: #4DA6FF;
+            overflow: hidden;
+        }
+
+        .main_ltinerary_details-table {
+            width: 50%;
+            float: left;
+        }
+
+        .main_ltinerary_details-cocent {
+            padding: 10pt;
+        }
+
+        .main_box_yellow_prompt {
+            font-size: 11pt;
+            font-weight: normal;
+            color: #FF8C1A;
+            background: #FFF5EB;
+            line-height: 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 0px 0px 0px 12pt;
+        }
+
+        .main_notes-word {
+            font-size: 11pt;
+            color: #5C5F66;
+        }
+
+        .footer_title {
+            font-size: 16pt;
+            color: #0F131A;
+            margin-top: 30px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            border-top: 1px solid #5C5F66
+        }
+
+        .footer_main {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .footer_main_Airmasters {
+            width: 26%;
+            font-size: 10pt;
+            font-weight: bold;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: #5C5F66;
+            float: left;
+            margin-right: 3px
+        }
+
+        .footer_main_ATA {
+            width: 20%;
+            font-size: 10pt;
+            font-weight: bold;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: #5C5F66;
+            float: left;
+            margin-right: 3px
+        }
+
+        .footer_main_email {
+            width: 50%;
+            font-size: 10pt;
+            font-weight: bold;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: #5C5F66;
+            float: left;
+        }
+        .footer_main_email_name{
+            float: left;
+            width: 120pt;
+        }
+        .footer_main_email_detail {
+            color: #4DA6FF;
+            float: left;
+        }
+
+        .main_box_table {
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #D2D4D9;
+            text-align: center;
+        }
+
+        td {
+            padding: 13px;
+        }
+
+        th {
+            background-color: #F7F8FA;
+            font-weight: bold;
+            font-size: 12pt;
+            font-weight: normal;
+            line-height: 36px;
+            letter-spacing: 0px;
+            color: #0F131A;
+        }
+
+        tr {
+            font-size: 12pt;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #0F131A;
+        }
+
+        .main_box_table-mobile {
+            font-size: 13pt;
+            font-weight: 500;
+            color: #0F131A;
+        }
+
+        .header_prompt {
+            background-color: #FFF5EB;
+            border: 1px solid #FF8C1A;
+            padding: 15px
+        }
+
+        .header_prompt_title {
+            font-size: 16pt;
+            font-weight: 500;
+            color: #FF8C1A;
+            margin-bottom: 10px;
+            /* position: relative; */
+            height: 25px;
+        }
+
+        .header_prompt_detail {
+            font-family: Poppins;
+            font-size: 12pt;
+            color: #5C5F66;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /*.header_prompt_detail_Bold {*/
+        /*    overflow: hidden;*/
+        /*    width: 100%;*/
+        /*}*/
+
+        .header_prompt_detail_Bold_title {
+            font-family: Poppins;
+            font-size: 12pt;
+            font-weight: 600;
+            margin-right: 5px;
+            white-space: normal;
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+
+        .header_prompt_detail_Bold_time {
+            color: #5C5F66;
+            font-weight: 400;
+            display: inline;
+        }
+
+        .header_prompt_detail_icon {
+            float: left;
+            margin-right: 7px;
+            /*  position: absolute;
+             top: 3px;
+             left: 0;
+             right: 0;
+             bottom: 0; */
+
+        }
+
+        .header_prompt_detail_text {
+            /* position: absolute; */
+            left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="Bigbox">
+    <div class="header">
+        <div class="header_logo">
+            <img class="header_logo_detail"
+                 src="https://img.alicdn.com/imgextra/i2/O1CN01Dqsocm297fmw5uq3Q_!!6000000008021-2-tps-604-210.png"
+                 alt="" />
+        </div>
+        <div class="header_order">
+            <div class="header_order_details">
+                Order No : $!{orderId}
+            </div>
+        </div>
+    </div>
+    <div class="header_explain">
+        <div class="header_explain_details">
+            <div class="header_explain_box">
+                <img class="header_explain_details_image"
+                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
+                     alt="" />
+                <div class="header_explain_details_words">
+                    Present e-ticket and valid identification at check-in
+                </div>
+            </div>
+        </div>
+        <div class="header_explain_details">
+            <div class="header_explain_box">
+                <img class="header_explain_details_image"
+                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
+                     alt="" />
+                <div class="header_explain_details_words">
+                    Present e-ticket and valid identification at check-in
+                </div>
+            </div>
+
+        </div>
+        <div class="header_explain_details">
+            <div class="header_explain_box">
+                <img class="header_explain_details_image"
+                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
+                     alt="" />
+                <div class="header_explain_details_words">
+                    Present e-ticket and valid identification at check-in
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="header_prompt">
+        <div class="header_prompt_title">
+            <div class="header_prompt_detail_icon">
+                <div style="width:20pt">
+                    <img style="width: 100%"
+                         src="https://gw.alicdn.com/imgextra/i1/O1CN01AfSlPn1f6oZiApOEB_!!6000000003958-2-tps-64-64.png"
+                         alt="" />
+                </div></div>
+            <div class="header_prompt_detail_text">${flightChange.title}</div>
+        </div>
+
+
+        #foreach( $detail in $flightChange.details )
+        <div class="header_prompt_detail">
+            <div class="header_prompt_detail_Bold_title">
+                #foreach( $detailSon in $detail )
+                    #if($detailSon.bold == true)
+                    ${detailSon.text}
+                    #else
+                    <div class="header_prompt_detail_Bold_time">
+                        ${detailSon.text}
+                    </div>
+                    #end
+                #end
+            </div>
+        </div>
+
+        #end
+
+
+    </div>
+    <div class="main_box">
+
+
+        #foreach( $ltinerary in $ltinerarys )
+
+            <div class="main_box_over_style">
+                <div class="main_box_title">
+                    Itinerary
+                </div>
+                <div class="main_box_title_PNR">
+                    <div class="main_box_title_PNR_detail">
+                        PNR: $!{ltinerary.segment.pnr}
+                    </div>
+                </div>
+            </div>
+            <div class="main_ltinerary">
+                <div class="main_ltinerary_header">
+                    <div class="main_ltinerary_header_left">
+                        <div class="main_ltinerary_header_left_word">
+                            $!{ltinerary.segment.airlineName} - $!{ltinerary.segment.marketAirline}
+                        </div>
+                        <div class="main_ltinerary_header_left-words">
+                            $!{ltinerary.segment.cabinClass}
+                        </div>
+                    </div>
+                    <div class="main_ltinerary_header_image">
+                        <img style="width: 60%;float:right"
+                             src="$!{ltinerary.segment.airlineLogo}"
+                             alt="" />
+                    </div>
+                </div>
+                <div class="main_ltinerary_details-cocent">
+                    <div class="main_ltinerary_details">
+                        <div class="main_ltinerary_details-table">Departure</div>
+                        <div class="main_ltinerary_details-table">Arrival</div>
+                    </div>
+                    <div class="main_ltinerary_details-Two">
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depDateString}</div>
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrDateString}</div>
+                    </div>
+                    <div class="main_ltinerary_details">
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depCityName} ($!{ltinerary.segment.depCityCode})</div>
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrCityName} ($!{ltinerary.segment.arrCityCode})</div>
+                    </div>
+                    <div class="main_ltinerary_details">
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depAirportName}</div>
+                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrAirportName}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main_box_yellow_prompt">
+                1 stop in $!{ltinerary.transfer.transferCityCode} · $!{ltinerary.transfer.transferTimeStr}
+            </div>
+
+
+            <div class="main_box_table">
+                <div class="main_box_over_style">
+                    <div class="main_box_title">
+                        Passengers Information
+                    </div>
+                    <div class="main_box_table-detail">
+                        <table class="main_box_table-details">
+                            <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Passengers</th>
+                                <th>Baggage Allowance</th>
+                                <th>Ticket Numbers</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            #foreach( $passenger in $ltinerary.passengers)
+                            <tr>
+                                <td>${foreach.count}</td>
+                                <td>$!{passenger.name}</td>
+                                <td>$!{passenger.baggageRule.cabinRule}<br /> $!{passenger.baggageRule.checkedRule}</td>
+                                <td class="main_box_table-mobile">$!{passenger.ticketNo}</td>
+                            </tr>
+                            #end
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        #end
+
+        #if($payments && !$payments.isEmpty())
+        <div class="main_box_table">
+            <div class="main_box_over_style">
+                <div class="main_box_title">
+                    Payment Details
+                </div>
+                <div class="main_box_table-detail">
+                    <table class="main_box_table-details">
+                        <thead>
+                        <tr>
+                            <th>Payment Method</th>
+                            <th>Fare</th>
+                            <th>Ticket Numberss</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        #foreach( $payment in $payments)
+                        <tr>
+                            <td>$!{payment.method}</td>
+                            <td>$!{payment.fare}</td>
+                            <td>$!{payment.tax}</td>
+                            <td class="main_box_table-mobile">$!{payment.total}</td>
+                        </tr>
+                        #end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         #end
+
+        <div class="main_notes">
+            <div class="main_box_over_style">
+                <div class="main_box_title">
+                    Notes
+                </div>
+            </div>
+            <div class="main_notes-word">
+                Please arrive at the indicated airport no later than 2 hours before your departure time. Kindly
+                present the same valid ID used for booking upon check-in at the airport counter.
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer_title">
+            ISSUED BY
+        </div>
+        <div class="footer_main">
+            <div class="footer_main_Airmasters">Airmasters Travel limited</div>
+            <div class="footer_main_ATA">ATA No. $!{ataNo}</div>
+            <div class="footer_main_email">
+                <div class="footer_main_email_name">
+                    Customer Service Email:
+                </div>
+                <div class="footer_main_email_detail">$!{serviceEmail}</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
