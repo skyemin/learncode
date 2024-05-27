@@ -67,7 +67,9 @@ public class TestFee {
             }
         }
         System.out.println(list.size());*/
-        Integer a = null;
-        System.out.println(a == 1);
+//        Integer a = null;
+//        System.out.println(a == 1);
+        System.out.println(System.currentTimeMillis());
+
     }
 }

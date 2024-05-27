@@ -39,7 +39,48 @@ public class TestVelocity {
         Template template = engine.getTemplate("template/test1.vm","UTF-8");
         VelocityContext context = new VelocityContext();
 
-        String json = "{\"flight\":{\"flightChange\":{\"title\":\"Flight Changed Alert\",\"details\":[[{\"bold\":false,\"text\":\"Flight PR2845 has been changed due to weather conditions.\"}],[{\"bold\":true,\"text\":\"Flight No changed to \"},{\"bold\":false,\"text\":\"PR2846\"}],[{\"bold\":true,\"text\":\"Departure Information changed to \"},{\"bold\":false,\"text\":\"2024-02-13 08:15, Manila Ninoy Aquino International Airport T1.\"}],[{\"bold\":true,\"text\":\"Arrival Information changed to \"},{\"bold\":false,\"text\":\"2024-02-13 12:40,Don Mueang Inernational Airport T2.\"}],[{\"bold\":false,\"text\":\"Estimated times are for reference only.Please confirm the scheduled times below with the airline.\"}]]},\"ltinerarys\":[{\"segment\":{\"pnr\":\"QSUN9A\",\"airlineName\":\"American Airlines\",\"airlineLogo\":\"https://gw.alicdn.com/imgextra/i2/O1CN01hOKP5J1sVAdqenOXA_!!6000000005771-2-tps-600-252.png\",\"equipType\":\"A319\",\"marketAirline\":\"PR2845\",\"cabinClass\":\"Economy\",\"flightTime\":\"2023-03-20 15:00\",\"depCityCode\":\"LA\",\"depCityName\":\"Los Angeles\",\"depDateString\":\"Wednesday, Jun 14 2024\",\"depDateTimeString\":\"15:00\",\"depAirportName\":\"Los Angeles International Airport\",\"arrCityCode\":\"NY\",\"arrCityName\":\"New York\",\"arrDateString\":\"Wednesday, Jun 14 2024\",\"arrDateTimeString\":\"21:00\",\"arrAirportName\":\"New York NY JFK International\"},\"passengers\":[{\"name\":\"Valen Eliza\",\"type\":0,\"baggageRule\":{\"cabinRule\":\"Cabin baggage 1x7kg\",\"checkedRule\":\"No free checked baggage\"},\"ticketNo\":\"999-3452678654\"}],\"transfer\":{\"transferCityCode\":\"NY\",\"transferCityName\":\"New York\",\"transferMinutes\":\"220\",\"transferTimeStr\":\"3h 40m\"}}]},\"payments\":[{\"method\":\"WP\",\"fare\":\"PHP 3,290.00 x2\",\"tax\":\"PHP 1,290.00 x2\",\"total\":\"PHP 9,160.00\"}],\"ataNo\":\"13306101\",\"serviceEmail\":\"service@fliggytravel.com\"}";
+        String json = "{\n" +
+                "        \"passengers\": [\n" +
+                "            {\n" +
+                "                \"lastName\": \"QIAO\",\n" +
+                "                \"firstName\": \"CHUAN\",\n" +
+                "                \"ticketNum\": \"000-4234325243\"\n" +
+                "            }\n" +
+                "        ],\n" +
+                "        \"contactEmail\": \"\",\n" +
+                "        \"orderId\": 325200106099,\n" +
+                "        \"flightDetails\": [\n" +
+                "            {\n" +
+                "                \"cabinClass\": \"Economy\",\n" +
+                "                \"flightNo\": \"NH860\",\n" +
+                "                \"arrAirportTerm\": \"\",\n" +
+                "                \"depTime\": \"Fri, May 10 2024 · 14:45\",\n" +
+                "                \"segmentId\": \"NH860-HKG-HND-20240510\",\n" +
+                "                \"arrCity\": \"Tokyo\",\n" +
+                "                \"depCity\": \"Hong Kong\",\n" +
+                "                \"depAirportTerm\": \"T1\",\n" +
+                "                \"arrAirport\": \"Tokyo Haneda International Airport\",\n" +
+                "                \"airline\": \"NH\",\n" +
+                "                \"depAirport\": \"Hong Kong International Airport\",\n" +
+                "                \"arrTime\": \"Fri, May 10 2024 · 20:00\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"cabinClass\": \"Economy\",\n" +
+                "                \"flightNo\": \"NH110\",\n" +
+                "                \"arrAirportTerm\": \"T7\",\n" +
+                "                \"depTime\": \"Sat, May 11 2024 · 11:00\",\n" +
+                "                \"segmentId\": \"NH110-HND-JFK-20240511\",\n" +
+                "                \"arrCity\": \"New York\",\n" +
+                "                \"depCity\": \"Tokyo\",\n" +
+                "                \"depAirportTerm\": \"T2\",\n" +
+                "                \"arrAirport\": \"John F Kennedy International Airport\",\n" +
+                "                \"airline\": \"NH\",\n" +
+                "                \"depAirport\": \"Tokyo Haneda International Airport\",\n" +
+                "                \"arrTime\": \"Sat, May 11 2024 · 11:10\"\n" +
+                "            }\n" +
+                "        ],\n" +
+                "        \"searchUrl\": \"https://pre-us.fliggytravel.com/flights/check\"\n" +
+                "    }";
         //String json = "{\"orderId\":\"123456789098765\",\"flightDetails\":[{\"airline\":\"CA\",\"arrAirport\":\"Don Mueang Inernational Airport\",\"arrAirportTerm\":\"T1\",\"arrCity\":\"Bangkok\",\"arrTime\":\"Wednesday, Apr 3 2024 · 18:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Ninoy Aquino International Airport\",\"depAirportTerm\":\"T2\",\"depCity\":\"Manila\",\"depTime\":\"Wednesday, Apr 3 2024 · 12:00\",\"flightNo\":\"1234\",\"segmentId\":\"1\"},{\"airline\":\"CA\",\"arrAirport\":\"BaiYun International Airport\",\"arrAirportTerm\":\"T2\",\"arrCity\":\"Beijing\",\"arrTime\":\"Wednesday, Apr 4 2024 · 02:00\",\"cabinClass\":\"Economy (Q)\",\"depAirport\":\"Don Mueang Inernational Airport\",\"depAirportTerm\":\"T1\",\"depCity\":\"Bangkok\",\"depTime\":\"Wednesday, Apr 3 2024 · 19:00\",\"flightNo\":\"3456\",\"segmentId\":\"2\"}]}";
         Map<String, Object> paramMap = JSONObject.parseObject(json);
         for (Map.Entry<String, Object> entry : paramMap.entrySet()) {

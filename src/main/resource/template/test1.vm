@@ -1,621 +1,436 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-apple-disable-message-reformatting">
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
     <title></title>
-    <style>
-        @page {
-            size: A4 portrait;
-            /* A4纸及方向或 landscape */
-            margin: 2cm;
-            /* 打印产物边距 */
-            width: 21cm;
-            /* 打印产物宽 */
-            height: 29.7cm;
-            /* 打印产物高 */
+
+    <style type="text/css">
+        @media only screen and (min-width: 720px) {
+            .u-row {
+                width: 700px !important;
+            }
+            .u-row .u-col {
+                vertical-align: top;
+            }
+
+            .u-row .u-col-37p33 {
+                width: 261.31px !important;
+            }
+
+            .u-row .u-col-62p67 {
+                width: 438.69px !important;
+            }
+
+            .u-row .u-col-100 {
+                width: 700px !important;
+            }
+
         }
 
+        @media (max-width: 720px) {
+            .u-row-container {
+                max-width: 100% !important;
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+            .u-row .u-col {
+                min-width: 320px !important;
+                max-width: 100% !important;
+                display: block !important;
+            }
+            .u-row {
+                width: 100% !important;
+            }
+            .u-col {
+                width: 100% !important;
+            }
+            .u-col > div {
+                margin: 0 auto;
+            }
+        }
         body {
             margin: 0;
             padding: 0;
-            font-family: Poppins;
-            box-sizing: border-box;
         }
 
-        .Bigbox {
-            margin: 0 auto;
-            background: #FFF;
-            width: 100%;
-        }
-
-        .header {
-            width: 100%;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        .header_logo {
-            width: 50%;
-            height: 80px;
-            float: left;
-            box-sizing: border-box;
-            line-height: 100px;
-
-        }
-
-        .header_logo_detail {
-            height: 40%
-        }
-
-        .header_order {
-            float: right;
-            width: 50%
-        }
-
-        .header_order_details {
-            font-size: 12pt;
-            width: 229px;
-            font-weight: bold;
-            line-height: normal;
-            color: #333333;
-            box-sizing: border-box;
-            line-height: 80px;
-            float: right;
-        }
-
-        .header_explain {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .header_explain_details {
-            width: 33%;
-            height: 52px;
-            line-height: 75px;
-            float: left;
-        }
-
-        .header_explain_details_image {
-            width: 15%;
-            height: 15%;
-            margin-right: 10px;
-            float: left;
-        }
-
-        .header_explain_details_words {
-            line-height: 19px;
-            vertical-align: middle;
-            font-size: 10pt;
-        }
-
-        .header_explain_box {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .main_box {
-            border: 1px solid #5C5F66;
-            margin-top: 20px;
-            padding: 30px 15px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .main_box_over_style {
-            overflow: hidden;
-        }
-
-        .main_box_title {
-            font-size: 16pt;
-            font-weight: bold;
-            color: #0F131A;
-            float: left;
-            width: 50%;
-        }
-
-        .main_box_title_PNR {
-            width: 50%;
-            float: right;
-        }
-
-        .main_box_title_PNR_detail {
-            line-height: 20pt;
-            width: 100pt;
-            font-size: 10pt;
-            font-weight: bold;
-            letter-spacing: 0px;
-            color: #FFFFFF;
-            background: #1972F9;
-            border-radius: 40px;
-            padding: 4px 10px;
-            gap: 10px;
-            float: right;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .main_ltinerary {
-            margin-top: 10px;
-            border: 1px solid #D2D4D9;
-            overflow: hidden;
-        }
-
-        .main_ltinerary_header {
-            overflow: hidden;
-            background-color: #F7F8FA;
-        }
-
-        .main_ltinerary_header_left_word {
-            font-size: 12pt;
-            font-weight: 500;
-            color: #0F131A;
-            padding: 10px 10px 0px 20px;
-            width: 100%;
-
-        }
-
-        .main_ltinerary_header_left-words {
-            font-size: 11pt;
-            font-weight: normal;
-            letter-spacing: 0px;
-            color: #919499;
-            padding-left: 20px;
-        }
-
-        .main_ltinerary_header_left {
-            float: left;
-            width: 50%;
-        }
-
-        .main_ltinerary_header_image {
-            width: 200px;
-            height: 56px;
-            float: inline-end;
-            padding: 4px 10px 0px 0px;
-            float: right;
-        }
-
-        .main_ltinerary_details {
-            width: 100%;
-            margin: 5px 0px;
-            font-size: 11pt;
-            font-weight: normal;
-            line-height: 120%;
-            letter-spacing: 0em;
-            color: #0F131A;
-            overflow: hidden;
-        }
-
-        .main_ltinerary_details-Two {
-            width: 100%;
-            margin: 5px 0px;
-            font-size: 11pt;
-            font-weight: normal;
-            line-height: 120%;
-            letter-spacing: 0em;
-            color: #4DA6FF;
-            overflow: hidden;
-        }
-
-        .main_ltinerary_details-table {
-            width: 50%;
-            float: left;
-        }
-
-        .main_ltinerary_details-cocent {
-            padding: 10pt;
-        }
-
-        .main_box_yellow_prompt {
-            font-size: 11pt;
-            font-weight: normal;
-            color: #FF8C1A;
-            background: #FFF5EB;
-            line-height: 40px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            padding: 0px 0px 0px 12pt;
-        }
-
-        .main_notes-word {
-            font-size: 11pt;
-            color: #5C5F66;
-        }
-
-        .footer_title {
-            font-size: 16pt;
-            color: #0F131A;
-            margin-top: 30px;
-        }
-
-        .footer {
-            margin-top: 50px;
-            border-top: 1px solid #5C5F66
-        }
-
-        .footer_main {
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .footer_main_Airmasters {
-            width: 26%;
-            font-size: 10pt;
-            font-weight: bold;
-            line-height: 32px;
-            letter-spacing: 0px;
-            color: #5C5F66;
-            float: left;
-            margin-right: 3px
-        }
-
-        .footer_main_ATA {
-            width: 20%;
-            font-size: 10pt;
-            font-weight: bold;
-            line-height: 32px;
-            letter-spacing: 0px;
-            color: #5C5F66;
-            float: left;
-            margin-right: 3px
-        }
-
-        .footer_main_email {
-            width: 50%;
-            font-size: 10pt;
-            font-weight: bold;
-            line-height: 32px;
-            letter-spacing: 0px;
-            color: #5C5F66;
-            float: left;
-        }
-        .footer_main_email_name{
-            float: left;
-            width: 120pt;
-        }
-        .footer_main_email_detail {
-            color: #4DA6FF;
-            float: left;
-        }
-
-        .main_box_table {
-            margin-bottom: 30px;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 40px;
+        table,
+        tr,
+        td {
+            vertical-align: top;
             border-collapse: collapse;
         }
 
-        th,
-        td {
-            border: 1px solid #D2D4D9;
-            text-align: center;
+        p {
+            margin: 0;
         }
 
-        td {
-            padding: 13px;
+        .ie-container table,
+        .mso-container table {
+            table-layout: fixed;
         }
 
-        th {
-            background-color: #F7F8FA;
-            font-weight: bold;
-            font-size: 12pt;
-            font-weight: normal;
-            line-height: 36px;
-            letter-spacing: 0px;
-            color: #0F131A;
+        * {
+            line-height: inherit;
         }
 
-        tr {
-            font-size: 12pt;
-            font-weight: normal;
-            letter-spacing: 0px;
-            color: #0F131A;
+        a[x-apple-data-detectors='true'] {
+            color: inherit !important;
+            text-decoration: none !important;
         }
 
-        .main_box_table-mobile {
-            font-size: 13pt;
-            font-weight: 500;
-            color: #0F131A;
-        }
-
-        .header_prompt {
-            background-color: #FFF5EB;
-            border: 1px solid #FF8C1A;
-            padding: 15px
-        }
-
-        .header_prompt_title {
-            font-size: 16pt;
-            font-weight: 500;
-            color: #FF8C1A;
-            margin-bottom: 10px;
-            /* position: relative; */
-            height: 25px;
-        }
-
-        .header_prompt_detail {
-            font-family: Poppins;
-            font-size: 12pt;
-            color: #5C5F66;
-            overflow: hidden;
+        table, td { color: #000000; } #u_body a { color: #6666ff; text-decoration: none; }
+        .myTable {
             width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            line-height: 150%;
         }
-
-        /*.header_prompt_detail_Bold {*/
-        /*    overflow: hidden;*/
-        /*    width: 100%;*/
-        /*}*/
-
-        .header_prompt_detail_Bold_title {
-            font-family: Poppins;
-            font-size: 12pt;
-            font-weight: 600;
-            margin-right: 5px;
-            white-space: normal;
-            word-break: break-all;
-            overflow-wrap: break-word;
+        .myTable th {
+            background-color: #F7F8FA;
+            font-weight: normal;
+            border: 0.5px solid #D2D4D9;
+            text-align: left;
+            padding: 5px;
         }
-
-        .header_prompt_detail_Bold_time {
-            color: #5C5F66;
-            font-weight: 400;
-            display: inline;
-        }
-
-        .header_prompt_detail_icon {
-            float: left;
-            margin-right: 7px;
-            /*  position: absolute;
-             top: 3px;
-             left: 0;
-             right: 0;
-             bottom: 0; */
-
-        }
-
-        .header_prompt_detail_text {
-            /* position: absolute; */
-            left: 30px;
+        .myTable td {
+            border: 0.5px solid #D2D4D9;
+            text-align: left;
+            padding: 5px;
         }
     </style>
+
+
+
+    <!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"><!--<![endif]-->
+
 </head>
 
-<body>
-<div class="Bigbox">
-    <div class="header">
-        <div class="header_logo">
-            <img class="header_logo_detail"
-                 src="https://img.alicdn.com/imgextra/i2/O1CN01Dqsocm297fmw5uq3Q_!!6000000008021-2-tps-604-210.png"
-                 alt="" />
-        </div>
-        <div class="header_order">
-            <div class="header_order_details">
-                Order No : $!{orderId}
-            </div>
-        </div>
-    </div>
-    <div class="header_explain">
-        <div class="header_explain_details">
-            <div class="header_explain_box">
-                <img class="header_explain_details_image"
-                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
-                     alt="" />
-                <div class="header_explain_details_words">
-                    Present e-ticket and valid identification at check-in
-                </div>
-            </div>
-        </div>
-        <div class="header_explain_details">
-            <div class="header_explain_box">
-                <img class="header_explain_details_image"
-                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
-                     alt="" />
-                <div class="header_explain_details_words">
-                    Present e-ticket and valid identification at check-in
-                </div>
-            </div>
-
-        </div>
-        <div class="header_explain_details">
-            <div class="header_explain_box">
-                <img class="header_explain_details_image"
-                     src="https://gw.alicdn.com/imgextra/i3/O1CN018bEXeM1ueRtbOzkiA_!!6000000006062-2-tps-156-156.png"
-                     alt="" />
-                <div class="header_explain_details_words">
-                    Present e-ticket and valid identification at check-in
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="header_prompt">
-        <div class="header_prompt_title">
-            <div class="header_prompt_detail_icon">
-                <div style="width:20pt">
-                    <img style="width: 100%"
-                         src="https://gw.alicdn.com/imgextra/i1/O1CN01AfSlPn1f6oZiApOEB_!!6000000003958-2-tps-64-64.png"
-                         alt="" />
-                </div></div>
-            <div class="header_prompt_detail_text">${flightChange.title}</div>
-        </div>
+<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #f2f3f5;color: #000000">
+<!--[if IE]><div class="ie-container"><![endif]-->
+<!--[if mso]><div class="mso-container"><![endif]-->
+<table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #f2f3f5;width:100%" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #f2f3f5;"><![endif]-->
 
 
-        #foreach( $detail in $flightChange.details )
-        <div class="header_prompt_detail">
-            <div class="header_prompt_detail_Bold_title">
-                #foreach( $detailSon in $detail )
-                    #if($detailSon.bold == true)
-                    ${detailSon.text}
-                    #else
-                    <div class="header_prompt_detail_Bold_time">
-                        ${detailSon.text}
-                    </div>
-                    #end
-                #end
-            </div>
-        </div>
 
-        #end
+            <div class="u-row-container" style="padding: 25px 0px 0px;background-color: #f2f3f5">
+                <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 700px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
+                    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+                        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 25px 0px 0px;background-color: #f2f3f5;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:700px;"><tr style="background-color: #ffffff;"><![endif]-->
 
+                        <!--[if (mso)|(IE)]><td align="center" width="438" style="width: 438px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                        <div class="u-col u-col-62p67" style="max-width: 320px;min-width: 438.69px;display: table-cell;vertical-align: top;">
+                            <div style="height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
+                                <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
 
-    </div>
-    <div class="main_box">
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:18px 10px 10px 15px;font-family:'Open Sans',sans-serif;" align="left">
 
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td style="padding-right: 0px;padding-left: 0px;" align="left">
 
-        #foreach( $ltinerary in $ltinerarys )
+                                                        <img align="left" border="0" src="https://gw.alicdn.com/imgextra/i3/O1CN01aiF8uR1HPXzQJ7sZs_!!6000000000750-2-tps-242-84.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 21%;max-width: 86.87px;" width="86.87"/>
 
-            <div class="main_box_over_style">
-                <div class="main_box_title">
-                    Itinerary
-                </div>
-                <div class="main_box_title_PNR">
-                    <div class="main_box_title_PNR_detail">
-                        PNR: $!{ltinerary.segment.pnr}
-                    </div>
-                </div>
-            </div>
-            <div class="main_ltinerary">
-                <div class="main_ltinerary_header">
-                    <div class="main_ltinerary_header_left">
-                        <div class="main_ltinerary_header_left_word">
-                            $!{ltinerary.segment.airlineName} - $!{ltinerary.segment.marketAirline}
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                            </div>
                         </div>
-                        <div class="main_ltinerary_header_left-words">
-                            $!{ltinerary.segment.cabinClass}
+                        <!--[if (mso)|(IE)]></td><![endif]-->
+                        <!--[if (mso)|(IE)]><td align="center" width="261" style="width: 261px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                        <div class="u-col u-col-37p33" style="max-width: 320px;min-width: 261.31px;display: table-cell;vertical-align: top;">
+                            <div style="height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
+                                <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:33px 20px 10px 10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-size: 14px; line-height: 40%; text-align: right; word-wrap: break-word;">
+                                                <p style="line-height: 40%;">Order ID: $!{orderId}</p>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="main_ltinerary_header_image">
-                        <img style="width: 60%;float:right"
-                             src="$!{ltinerary.segment.airlineLogo}"
-                             alt="" />
+                        <!--[if (mso)|(IE)]></td><![endif]-->
+                        <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
                     </div>
                 </div>
-                <div class="main_ltinerary_details-cocent">
-                    <div class="main_ltinerary_details">
-                        <div class="main_ltinerary_details-table">Departure</div>
-                        <div class="main_ltinerary_details-table">Arrival</div>
-                    </div>
-                    <div class="main_ltinerary_details-Two">
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depDateString}</div>
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrDateString}</div>
-                    </div>
-                    <div class="main_ltinerary_details">
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depCityName} ($!{ltinerary.segment.depCityCode})</div>
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrCityName} ($!{ltinerary.segment.arrCityCode})</div>
-                    </div>
-                    <div class="main_ltinerary_details">
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.depAirportName}</div>
-                        <div class="main_ltinerary_details-table">$!{ltinerary.segment.arrAirportName}
+            </div>
+
+
+
+
+
+            <div class="u-row-container" style="padding: 0px 0px 25px;background-color: transparent">
+                <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 700px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
+                    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+                        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px 0px 25px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:700px;"><tr style="background-color: #ffffff;"><![endif]-->
+
+                        <!--[if (mso)|(IE)]><td align="center" width="700" style="width: 700px;padding: 5px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                        <div class="u-col u-col-100" style="max-width: 320px;min-width: 700px;display: table-cell;vertical-align: top;">
+                            <div style="height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
+                                <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 5px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 2px solid #6666ff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                                <tbody>
+                                                <tr style="vertical-align: top">
+                                                    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                                        <span>&#160;</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                                <p style="line-height: 140%;">Dear Passenger,</p>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                                <p style="line-height: 140%;">Your flight booking has been confirmed and your tickets have been issued.
+                                                    You will find your itinerary and e-receipt attached. We advise you to print out your itinerary and take it with you to ensure your trip goes as smoothly as possible.</p>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                                <p style="line-height: 140%;"><span style="color:#FF8C1A">Order Number：</span>$!{orderId}</p>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                #if(!$flightDetails.isEmpty())
+                                    <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                                <div style="font-family: 'Open Sans',sans-serif; font-size: 18px; line-height: 120%; text-align: left; word-wrap: break-word;">
+                                                    <p style="line-height: 120%;"><strong>Flight Details</strong></p>
+                                                </div>
+                                                <br/>
+                                                <table class="myTable">
+                                                    <tr>
+                                                        <th>Flight</th>
+                                                        <th>Flight NO.</th>
+                                                        <th>Departure</th>
+                                                        <th>Arrival</th>
+                                                        <th>Departure Time</th>
+                                                        <th>Arrival Time</th>
+                                                        <th>Class</th>
+                                                    </tr>
+                                                    #foreach( $flight in $flightDetails )
+                                                        <tr>
+                                                            <td>$!{flight.segmentId}</td>
+                                                            <td>$!{flight.airline} $!{flight.flightNo}</td>
+                                                            <td>$!{flight.depCity} $!{flight.depAirport} $!{flight.depAirportTerm}</td>
+                                                            <td>$!{flight.arrCity} $!{flight.arrAirport} $!{flight.arrAirportTerm}</td>
+                                                            <td>$!{flight.depTime}</td>
+                                                            <td>$!{flight.arrTime}</td>
+                                                            <td>$!{flight.cabinClass}</td>
+                                                        </tr>
+                                                    #end
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                #end
+                                #if($passengers && !$passengers.isEmpty())
+                                    <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                                <div style="font-family: 'Open Sans',sans-serif; font-size: 18px; font-weight: 700; line-height: 120%; text-align: left; word-wrap: break-word;">
+                                                    <p style="line-height: 120%;">Passengers</p>
+                                                </div>
+                                                <table class="myTable">
+                                                    <tr>
+                                                        <th>NO.</th>
+                                                        <th>Name</th>
+                                                        <th>Ticket Numbers</th>
+                                                    </tr>
+                                                    #foreach( $passenger in $passengers )
+                                                        <tr>
+                                                            <td>${foreach.count}</td>
+                                                            <td>$!{passenger.firstName} $!{passenger.lastName}</td>
+                                                            <td><b>$!{passenger.ticketNum}</b></td>
+                                                        </tr>
+                                                    #end
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                #end
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                                <p style="line-height: 140%;">You can check your booking details using the button below.</p>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
+                                            <div align="left">
+                                                <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="$!{searchUrl}" style="height:34px; v-text-anchor:middle; width:176px;" arcsize="59%"  stroke="f" fillcolor="#6666ff"><w:anchorlock/><center style="color:#FFFFFF;font-family: 'Open Sans',sans-serif; "><![endif]-->
+                                                <a href="$!{searchUrl}" target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #6666ff; border-radius: 20px;-webkit-border-radius: 20px; -moz-border-radius: 20px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-family: 'Open Sans',sans-serif; font-size: 14px;">
+                                                    <span style="display:block;padding:10px 20px;line-height:100%;"><span style="line-height: 14px;">Check your bookings</span></span>
+                                                </a>
+                                                <!--[if mso]></center></v:roundrect><![endif]-->
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 12px; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                <div data-v-2b401b1b="" data-v-ebaa93a6="">
+                                                    <div data-v-2b401b1b="" data-v-ebaa93a6="">
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <div>
+                                                                            <div data-v-541a7806="">
+                                                                                <div data-v-541a7806="" data-spm-anchor-id="0.0.0.i8.724b124dcWNZe6">For further assistance, please <span style="color: #6666ff; line-height: 12px;"><a rel="noopener" href="mailto:$!{contactEmail}" target="_blank" style="color: #6666ff;">contact us</a></span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <table style="font-family:'Open Sans',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Open Sans',sans-serif;" align="left">
+
+                                            <div style="font-family: 'Open Sans',sans-serif; font-size: 12px; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                <div data-v-2b401b1b="" data-v-ebaa93a6="">
+                                                    <div data-v-2b401b1b="" data-v-ebaa93a6="">
+                                                        <div data-v-541a7806="">
+                                                            <div data-v-541a7806="" data-spm-anchor-id="0.0.0.i8.724b124dcWNZe6">From Fliggy Team</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                            </div>
                         </div>
+                        <!--[if (mso)|(IE)]></td><![endif]-->
+                        <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
                     </div>
                 </div>
             </div>
 
 
-            <div class="main_box_yellow_prompt">
-                1 stop in $!{ltinerary.transfer.transferCityCode} · $!{ltinerary.transfer.transferTimeStr}
-            </div>
 
-
-            <div class="main_box_table">
-                <div class="main_box_over_style">
-                    <div class="main_box_title">
-                        Passengers Information
-                    </div>
-                    <div class="main_box_table-detail">
-                        <table class="main_box_table-details">
-                            <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>Passengers</th>
-                                <th>Baggage Allowance</th>
-                                <th>Ticket Numbers</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            #foreach( $passenger in $ltinerary.passengers)
-                            <tr>
-                                <td>${foreach.count}</td>
-                                <td>$!{passenger.name}</td>
-                                <td>$!{passenger.baggageRule.cabinRule}<br /> $!{passenger.baggageRule.checkedRule}</td>
-                                <td class="main_box_table-mobile">$!{passenger.ticketNo}</td>
-                            </tr>
-                            #end
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-        #end
-
-        #if($payments && !$payments.isEmpty())
-        <div class="main_box_table">
-            <div class="main_box_over_style">
-                <div class="main_box_title">
-                    Payment Details
-                </div>
-                <div class="main_box_table-detail">
-                    <table class="main_box_table-details">
-                        <thead>
-                        <tr>
-                            <th>Payment Method</th>
-                            <th>Fare</th>
-                            <th>Ticket Numberss</th>
-                            <th>Total</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        #foreach( $payment in $payments)
-                        <tr>
-                            <td>$!{payment.method}</td>
-                            <td>$!{payment.fare}</td>
-                            <td>$!{payment.tax}</td>
-                            <td class="main_box_table-mobile">$!{payment.total}</td>
-                        </tr>
-                        #end
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-         #end
-
-        <div class="main_notes">
-            <div class="main_box_over_style">
-                <div class="main_box_title">
-                    Notes
-                </div>
-            </div>
-            <div class="main_notes-word">
-                Please arrive at the indicated airport no later than 2 hours before your departure time. Kindly
-                present the same valid ID used for booking upon check-in at the airport counter.
-            </div>
-        </div>
-
-    </div>
-    <div class="footer">
-        <div class="footer_title">
-            ISSUED BY
-        </div>
-        <div class="footer_main">
-            <div class="footer_main_Airmasters">Airmasters Travel limited</div>
-            <div class="footer_main_ATA">ATA No. $!{ataNo}</div>
-            <div class="footer_main_email">
-                <div class="footer_main_email_name">
-                    Customer Service Email:
-                </div>
-                <div class="footer_main_email_detail">$!{serviceEmail}</div>
-            </div>
-        </div>
-    </div>
-</div>
+            <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--[if mso]></div><![endif]-->
+<!--[if IE]></div><![endif]-->
 </body>
 
 </html>
