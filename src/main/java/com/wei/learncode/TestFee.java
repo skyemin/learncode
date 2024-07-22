@@ -6,6 +6,7 @@ import com.google.common.collect.TreeRangeMap;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -69,7 +70,10 @@ public class TestFee {
         System.out.println(list.size());*/
 //        Integer a = null;
 //        System.out.println(a == 1);
-        System.out.println(System.currentTimeMillis());
-
+        Long time;
+        time = 1718888400L*1000+1000;
+        Date date = new Date(time);
+        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+        System.out.println(format);
     }
 }
