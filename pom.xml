@@ -206,7 +206,14 @@
 			<artifactId>pass-sdk</artifactId>
 			<version>3.0.4</version>
         </dependency>
-    </dependencies>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.3</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
