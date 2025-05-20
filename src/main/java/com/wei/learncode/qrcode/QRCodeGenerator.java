@@ -18,9 +18,11 @@ import java.util.Map;
 public class QRCodeGenerator {
 
     public static void main(String[] args) {
-        String url = "https://www.baidu.com";
-        String base64String = generateBase64QRCode(url, 250, "png");
-        System.out.println("Base64 string: " + base64String);
+//        String url = "https://www.baidu.com";
+//        String base64String = generateBase64QRCode(url, 250, "png");
+//        System.out.println("Base64 string: " + base64String);
+        String test  ="https://market.wapa.taobao.com/app/trip/rx-vehicle-ecosystem/pages/signing?tpOrderId=%s&fromSource=3&raw_webview=true&fpt=source(asmart)uniqueId(19483209109)channel(sms)&_projVer=1.15.15";
+        System.out.println(String.format(test, "AFJJVvVRv6na"));
     }
 
     private static String generateBase64QRCode(String url, int size, String fileType) {

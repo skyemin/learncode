@@ -201,11 +201,6 @@
 			<artifactId>flying-saucer-pdf</artifactId>
 			<version>9.1.15</version>
 		</dependency>
-		<dependency>
-			<groupId>com.alitrip.sign</groupId>
-			<artifactId>pass-sdk</artifactId>
-			<version>3.0.4</version>
-        </dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
 		<dependency>
 			<groupId>com.google.zxing</groupId>
