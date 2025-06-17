@@ -1,3 +1,5 @@
+package com.wei.learncode;
+
 import java.util.*;
 
 class RentalRequest1 {
