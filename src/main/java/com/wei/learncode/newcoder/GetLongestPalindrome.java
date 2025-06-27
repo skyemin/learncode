@@ -19,18 +19,29 @@ public class GetLongestPalindrome {
         return true;
     }
 
-    public int getLongestPalindrome(String A, int n) {
-
+    public String getLongestPalindrome(String A) {
+        int n = A.length();
         int max = 0;
+        int start = 0;
+        int end = 0;
         String v;
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j <= n ; j++) {
                 String tmp = A.substring(i,j);
                 if(isPalindromic(tmp) && tmp.length()>max){
                     max = tmp.length();
+                    start = i;
+                    end = j;
                 }
             }
         }
-        return max;
+        return A.substring(start,end);
+    }
+
+    public static void main(String[] args) {
+
+        String test = "babad";
+        GetLongestPalindrome getLongestPalindrome = new GetLongestPalindrome();
+        System.out.println(getLongestPalindrome.getLongestPalindrome(test));
     }
 }

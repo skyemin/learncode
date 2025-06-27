@@ -4,6 +4,7 @@ import com.wei.learncode.geekAlgorithm.day6.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -14,16 +15,16 @@ import java.util.Queue;
  */
 public class LevelOrder {
 
-    public ArrayList<ArrayList<Integer>> levelOrder (TreeNode root) {
+    public List<List<Integer>> levelOrder (TreeNode root) {
         // write code here
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque();
         if(root != null){
             queue.add(root);
         }
         while (!queue.isEmpty()){
             int n = queue.size();
-            ArrayList<Integer> level = new ArrayList<>();
+            List<Integer> level = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 TreeNode node = queue.poll();
                 level.add(node.val);
