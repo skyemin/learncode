@@ -5,8 +5,11 @@ public class Main {
 	//jdk动态代理,Spring默认实现方式
 	public static void main(String[] args) {
 		
-		BookFacadeProxy b = new BookFacadeProxy();
-		BookFacade bookFacade = (BookFacade) b.bind(new BookFacadeImpl());
-		bookFacade.addBook();
+//		BookFacadeProxy b = new BookFacadeProxy();
+//		BookFacade bookFacade = (BookFacade) b.bind(new BookFacadeImpl());
+//		bookFacade.addBook();
+		ProxyFactory proxyFactory = new ProxyFactory(new BookFacadeImpl());
+        BookFacade bookFacade = (BookFacade) proxyFactory.getProxyInstance();
+        bookFacade.addBook();
 	}
 }

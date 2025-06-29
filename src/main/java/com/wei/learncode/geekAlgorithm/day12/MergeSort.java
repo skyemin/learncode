@@ -18,6 +18,7 @@ public class MergeSort {
         int mid = (begin + end) >> 1;
         mergeSort(nums,begin,mid);
         mergeSort(nums,mid+1,end);
+        //两个有序数组合并成一个有序数组
         merge(nums,begin,mid,end);
     }
 
@@ -43,6 +44,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
+        System.out.println(430103%100);
         int[] array = {1,7,8,9,2,1,3,5,4};
         MergeSort mergeSort = new MergeSort();
         mergeSort.mergeSort(array,0,array.length-1);
