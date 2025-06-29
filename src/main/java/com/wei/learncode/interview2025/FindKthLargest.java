@@ -30,6 +30,7 @@ public class FindKthLargest {
             }
         }
 
+        //第k大即第length-k小
         if (k <= big.size()) {
             return findKthLargest(big.toArray(new Integer[0]), k);
         } else if (k > big.size() + equal.size()) {
